@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080706">
+
+  <title>SABOR | AR Menu</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #080706;
+      color: #f6f0e5;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .hero {
+      padding: 55px 22px 38px;
+      text-align: center;
+      background:
+        radial-gradient(circle at top, #49300f 0%, #171006 35%, #080706 72%);
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 46px;
+      letter-spacing: 9px;
+      color: #d8ad57;
+      margin: 0;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: #b8a98e;
+    }
+
+    .hero h2 {
+      font-family: Georgia, serif;
+      font-size: 31px;
+      margin: 42px 0 10px;
+    }
+
+    .hero p {
+      max-width: 520px;
+      margin: auto;
+      color: #aaa295;
+      line-height: 1.6;
+    }
+
+    .instruction {
+      margin: 25px auto 0;
+      max-width: 430px;
+      padding: 13px;
+      border: 1px solid #57431f;
+      border-radius: 14px;
+      color: #d8ad57;
+      font-size: 13px;
+    }
+
+    .menu {
+      max-width: 760px;
+      margin: auto;
+      padding: 12px 16px 60px;
+    }
+
+    .section-title {
+      font-family: Georgia, serif;
+      font-size: 25px;
+      margin: 26px 4px 15px;
+    }
+
+    .card {
+      background: #12110f;
+      border: 1px solid #352b1c;
+      border-radius: 22px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,.35);
+    }
+
+    .visual {
+      height: 190px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 86px;
+      background:
+        radial-gradient(circle, #4b3316 0%, #21170b 38%, #0c0b09 75%);
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .badge {
+      color: #d8ad57;
+      font-size: 11px;
+      letter-spacing: 1.6px;
+      margin-bottom: 7px;
+    }
+
+    .title-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .dish-name {
+      font-family: Georgia, serif;
+      font-size: 23px;
+    }
+
+    .price {
+      color: #d8ad57;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .description {
+      color: #9e978c;
+      font-size: 14px;
+      line-height: 1.55;
+      margin: 10px 0 18px;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 13px;
+      background: #d0a34e;
+      color: #090806;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    footer {
+      text-align: center;
+      color: #625e56;
+      font-size: 12px;
+      padding: 0 20px 45px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+
+    <h1 class="logo">SABOR</h1>
+
+    <div class="subtitle">
+      AUGMENTED DINING
+    </div>
+
+    <h2>Don't imagine your meal.<br>See it.</h2>
+
+    <p>
+      Explore every dish in interactive 3D and place it
+      directly on your table using augmented reality.
+    </p>
+
+    <div class="instruction">
+      SELECT A DISH • ROTATE IN 3D • PLACE IN AR
+    </div>
+
+  </section>
+
+
+  <main class="menu">
+
+    <div class="section-title">
+      Signature Collection
+    </div>
+
+
+    <!-- BURGER -->
+
+    <article class="card">
+
+      <div class="visual">
+        🍔
+      </div>
+
+      <div class="content">
+
+        <div class="badge">
+          SIGNATURE • 3D + AR
+        </div>
+
+        <div class="title-row">
+
+          <div class="dish-name">
+            Wagyu Signature Burger
+          </div>
+
+          <div class="price">
+            AED 65
+          </div>
+
+        </div>
+
+        <div class="description">
+          Double wagyu beef, aged cheddar, tomato,
+          crisp lettuce and toasted brioche with golden fries.
+        </div>
+
+        <a class="button" href="burger.html">
+          EXPERIENCE IN 3D & AR
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- PASTA -->
+
+    <article class="card">
+
+      <div class="visual">
+        🍝
+      </div>
+
+      <div class="content">
+
+        <div class="badge">
+          3D + AR EXPERIENCE
+        </div>
+
+        <div class="title-row">
+
+          <div class="dish-name">
+            Black Truffle Pasta
+          </div>
+
+          <div class="price">
+            AED 72
+          </div>
+
+        </div>
+
+        <div class="description">
+          Silky truffle cream, parmesan,
+          cracked pepper and fresh herbs.
+        </div>
+
+        <a class="button" href="pasta.html">
+          EXPERIENCE IN 3D & AR
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- SHRIMP -->
+
+    <article class="card">
+
+      <div class="visual">
+        🍤
+      </div>
+
+      <div class="content">
+
+        <div class="badge">
+          3D + AR EXPERIENCE
+        </div>
+
+        <div class="title-row">
+
+          <div class="dish-name">
+            Dynamite Shrimp
+          </div>
+
+          <div class="price">
+            AED 54
+          </div>
+
+        </div>
+
+        <div class="description">
+          Crispy prawns finished with SABOR's
+          signature spicy dynamite sauce.
+        </div>
+
+        <a class="button" href="shrimp.html">
+          EXPERIENCE IN 3D & AR
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- SALMON -->
+
+    <article class="card">
+
+      <div class="visual">
+        🐟
+      </div>
+
+      <div class="content">
+
+        <div class="badge">
+          3D + AR EXPERIENCE
+        </div>
+
+        <div class="title-row">
+
+          <div class="dish-name">
+            Charred Atlantic Salmon
+          </div>
+
+          <div class="price">
+            AED 89
+          </div>
+
+        </div>
+
+        <div class="description">
+          Flame-charred salmon with seasonal vegetables
+          and citrus butter.
+        </div>
+
+        <a class="button" href="salmon.html">
+          EXPERIENCE IN 3D & AR
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- DESSERT -->
+
+    <article class="card">
+
+      <div class="visual">
+        🍫
+      </div>
+
+      <div class="content">
+
+        <div class="badge">
+          3D + AR EXPERIENCE
+        </div>
+
+        <div class="title-row">
+
+          <div class="dish-name">
+            Chocolate Lava
+          </div>
+
+          <div class="price">
+            AED 42
+          </div>
+
+        </div>
+
+        <div class="description">
+          Warm dark chocolate fondant,
+          molten centre and vanilla ice cream.
+        </div>
+
+        <a class="button" href="dessert.html">
+          EXPERIENCE IN 3D & AR
+        </a>
+
+      </div>
+
+    </article>
+
+  </main>
+
+
+  <footer>
+    SABOR • A NEXT-GENERATION DINING EXPERIENCE
+  </footer>
+
+</body>
+</html>
