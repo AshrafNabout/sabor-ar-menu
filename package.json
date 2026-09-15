@@ -1,0 +1,11 @@
+{
+  "name": "sabor-ar-menu",
+  "private": true,
+  "scripts": {
+    "validate-assets": "node validate-assets.mjs"
+  },
+  "devDependencies": {
+    "gltf-validator": "^2.0.0-dev.3.10",
+    "three": "^0.186.0"
+  }
+}

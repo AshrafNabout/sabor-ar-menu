@@ -33,7 +33,7 @@ class Dish:
             for k in range(n):v.append(p+r*(math.cos(k*2*math.pi/n)*a+math.sin(k*2*math.pi/n)*b))
         for i in range(len(points)-1):
             for k in range(n):
-                a=i*n+k;b=i*n+(k+1)%n;f.extend([[a,a+n,b],[b,a+n,b+n]])
+                a=i*n+k;b=i*n+(k+1)%n;f.extend([[a,b,a+n],[b,b+n,a+n]])
         self.mesh(v,f,c)
     def plate(self):
         self.cylinder((0,.006,0),.145,.008,[.12,.15,.16]);self.cylinder((0,.011,0),.128,.004,[.19,.23,.24]);
@@ -51,7 +51,7 @@ class Dish:
         for v,f,c in self.parts:
             norm=np.zeros_like(v);face=np.cross(v[f[:,1]]-v[f[:,0]],v[f[:,2]]-v[f[:,0]])
             for k in range(3):np.add.at(norm,f[:,k],face)
-            norm/=np.maximum(np.linalg.norm(norm,axis=1,keepdims=True),1e-12)
+            lengths=np.linalg.norm(norm,axis=1,keepdims=True);norm/=np.maximum(lengths,1e-12);norm[lengths[:,0]<1e-10]=[0,1,0]
             pos=add(v,'VEC3',5126,True);normal=add(norm,'VEC3',5126,False);indices=add(f.reshape(-1),'SCALAR',5125,False)
             mats.append({'pbrMetallicRoughness':{'baseColorFactor':c+[1],'metallicFactor':0,'roughnessFactor':.65},'doubleSided':True})
             meshes.append({'primitives':[{'attributes':{'POSITION':pos,'NORMAL':normal},'indices':indices,'material':len(mats)-1}]})
