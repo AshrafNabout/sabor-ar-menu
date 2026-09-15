@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>SABOR | Wagyu Burger AR</title>
+
+<script type="module"
+src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js">
+</script>
+
+<style>
+
+* { box-sizing:border-box; }
+
+body {
+    margin:0;
+    background:#080706;
+    color:#f5efe4;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+header {
+    padding:18px 20px;
+}
+
+.back {
+    color:#d5a84f;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.title {
+    font-family:Georgia,serif;
+    font-size:29px;
+    margin-top:20px;
+}
+
+.price {
+    color:#d5a84f;
+    font-size:18px;
+    font-weight:bold;
+    margin-top:6px;
+}
+
+.viewer {
+    margin-top:10px;
+}
+
+model-viewer {
+    width:100%;
+    height:58vh;
+
+    background:
+    radial-gradient(
+        circle,
+        #443016 0%,
+        #1b140a 40%,
+        #080706 75%
+    );
+}
+
+.ar-button {
+    background:#d1a34d;
+    color:#080706;
+
+    border:none;
+    border-radius:15px;
+
+    padding:16px 22px;
+
+    font-size:15px;
+    font-weight:bold;
+
+    position:absolute;
+
+    left:50%;
+    bottom:25px;
+
+    transform:translateX(-50%);
+
+    white-space:nowrap;
+
+    box-shadow:0 6px 25px rgba(0,0,0,.4);
+}
+
+.instructions {
+    text-align:center;
+    color:#948d81;
+    font-size:13px;
+    padding:13px;
+}
+
+.details {
+    padding:10px 20px 35px;
+}
+
+.details h2 {
+    font-family:Georgia,serif;
+    font-size:21px;
+}
+
+.details p {
+    color:#aaa296;
+    line-height:1.6;
+}
+
+.badge {
+    display:inline-block;
+
+    border:1px solid #705625;
+
+    border-radius:20px;
+
+    padding:7px 12px;
+
+    color:#d5a84f;
+
+    font-size:11px;
+
+    letter-spacing:1px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html" class="back">
+← SABOR MENU
+</a>
+
+<div class="title">
+Wagyu Signature Burger
+</div>
+
+<div class="price">
+AED 65
+</div>
+
+</header>
+
+
+<div class="viewer">
+
+<model-viewer
+
+    src="assets/burger.glb"
+
+    alt="SABOR Wagyu Signature Burger"
+
+    camera-controls
+
+    touch-action="pan-y"
+
+    auto-rotate
+
+    shadow-intensity="1"
+
+    shadow-softness="1"
+
+    exposure="1.1"
+
+    environment-image="neutral"
+
+    ar
+
+    ar-scale="fixed"
+
+    ar-modes="webxr scene-viewer quick-look">
+
+    <button
+        slot="ar-button"
+        class="ar-button">
+
+        ◉ VIEW ON YOUR TABLE
+
+    </button>
+
+</model-viewer>
+
+</div>
+
+
+<div class="instructions">
+
+DRAG TO ROTATE • PINCH TO ZOOM • TAP AR TO PLACE
+
+</div>
+
+
+<section class="details">
+
+<span class="badge">
+REAL-SCALE AR
+</span>
+
+<h2>
+See it before you order it.
+</h2>
+
+<p>
+Double wagyu beef layered with aged cheddar,
+tomato, crisp lettuce and toasted brioche,
+served with golden fries.
+</p>
+
+<p>
+Use the 3D viewer to inspect the dish from
+every angle, then select
+<strong>View on Your Table</strong>
+to experience the dish in augmented reality.
+</p>
+
+</section>
+
+
+</body>
+</html>
