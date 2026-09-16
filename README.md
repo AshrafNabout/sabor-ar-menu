@@ -6,10 +6,10 @@ Five self-contained GLB and USDZ assets are hosted in this repository: burger, p
 
 The menu opens with five high-resolution AI-created food images, compressed as WebP. These are illustrative imagery, not photographs of the restaurant's actual dishes. Prices are illustrative. Select a dish, then choose **Explore in 3D** to rotate or zoom its photo-textured plaque. Photo mode does not require WebGL or download the 3D library.
 
-On an AR-capable device, choose **Place on your table**. iPhone Safari uses a direct Quick Look link to a prebuilt USDZ file, available even when browser WebGL is unavailable. The model-viewer also receives an explicit ios-src. Supported Android Chrome devices use WebXR or Scene Viewer. A desktop browser supports interactive 3D; it does not provide phone camera AR. In-app browsers can restrict native AR launches, so open directly in Safari or Chrome.
+On an AR-capable device, choose **Place on your table**. iPhone Safari uses a direct Quick Look link to a prebuilt USDZ file, available even when browser WebGL is unavailable. The model-viewer also receives an explicit ios-src. Supported Android Chrome devices launch Scene Viewer directly from a dish-specific link, without waiting for the browser 3D library. Unsupported devices return to the selected dish with guidance. A desktop browser supports interactive 3D; it does not provide phone camera AR. In-app browsers can restrict native AR launches, so open directly in Safari or Chrome.
 
 GitHub Pages serves the main branch root. All paths are relative for project-subdirectory hosting. The old dish URLs redirect to the corresponding selection, so existing links remain valid. `assets/sabor-qr.png` encodes the public menu address.
 
-Run locally: `python -m http.server 8080`. The pinned model-viewer 4.1.0 library is loaded from Google's CDN; an internet connection is required. The UI reports asset failures and offers a retry instead of leaving a blank viewer.
+Run locally: `python -m http.server 8080`. The pinned model-viewer 4.1.0 library is loaded from Google's CDN; an internet connection is required. The UI reports asset failures and offers a retry. If WebGL or the viewer library is unavailable, the dish photo remains visible. Desktop AR controls lead to the QR code.
 
 Physical-device camera placement must be verified on a compatible iPhone and Android device; desktop validation cannot establish surface tracking.
